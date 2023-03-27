@@ -1,4 +1,4 @@
-# MODIFIQUEI PARA DAR CONFLITO
+# Preparação
 
 ## Instalação
 
