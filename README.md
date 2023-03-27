@@ -1,13 +1,50 @@
-# Conflito Novamente
+# Aprendendo Git
+
+<br id="topo">
+
+## :mag_right: Índice
+
+<h4 style="color: green; text-align: center">Preparação</h4>
+<p style="text-align: center">
+    <a href="#instalacao">Instalação</a> |
+    <a href="#chaves">Chaves</a> |
+    <a href="#colocandoChaves">Colocando Chaves</a>
+</p>
+<h4 style="color: green; text-align: center">Comando Básicos</h4>
+<p style="text-align: center">
+    <a href="#configurando">Configurando</a> |
+    <a href="#adicionando">Adicionando arquivos</a>
+</p>
+<h4 style="color: green; text-align: center">Erros</h4>
+<p style="text-align: center">
+    <a href="#conflitoRepositório">Conflito Repositório Local e Remoto</a>
+</p>
+
+
+# Preparação
+
+
+<span id="instalacao">
 
 ## Instalação
 
 Para instalar o Git entre em: https://git-scm.com/downloads
 e instale de acordo com sua máquina.
 
+
+→ [Voltar ao topo](#topo)
+
+
+<span id="chaves">
+
 ## Como criar uma chave
 
 Para criar uma chave, você precisará entrar na sua conta do <a href="https://github.com">Github</a> (Caso não tenha, será necessário criar), clicar em "<a href="https://github.com/settings/apps">  Developer settings </a>", depois clicar em "Personal access tokens" e logo após em Tokens (classic), clique Nomeie a chave em "Generate new token" e logo após em "Generate new token (classic)". Nomeie a chave, coloque quanto tempo deseja que a chave fique ativa e selecione as permissões de acesso que essa chave terá.
+
+→ [Voltar ao topo](#topo)
+
+
+<span id="colocandoChaves">
 
 ## Colocando a chave de acesso
 
@@ -19,8 +56,12 @@ Em "Nome de Usuário" coloque o mesmo nome que você colocou no seu GitHub (Ex: 
 
 Em "Senha" coloque sua chave de aceso.
 
+→ [Voltar ao topo](#topo)
 
 # Comandos Básicos
+
+
+<span id="conectando">
 
 ## Conectando um Repositório do Git com o Local
 
@@ -29,6 +70,10 @@ Crie uma pasta e encaminhe um "Prompt de Comando" para ela (Uma maneira rápida 
 Digite no "Prompt de Comando": git init (isso criará uma pasta oculta, caso não apareça clique em "exibir", logo após em "Itens Ocultos").
 
 <h4 style="color: yellow">Obs: Caso o repositório já exista no github utilizasse o comando: "git clone linkDoRepositório" (Isso criará uma pasta com os arquivos, caso não queira criar uma pasta insira o comando: "git clone linkDoRepositório ." (ex: git clone https://github.com/BrunoSerpa/Aprendendo-a-usar-GIT .) </h4>
+
+→ [Voltar ao topo](#topo)
+
+<span id="configurando">
 
 ## Configurando O Git
 
@@ -41,6 +86,10 @@ Após criar uma pasta git através do comando "git init" ou "git clone" o git de
 ## Trocando de Master para Main
 para trocar para main, insira: git checkout -b main
 
+→ [Voltar ao topo](#topo)
+
+<span id="adicionando">
+
 ## Adicionando Arquivos
 Antes de adicionar qualquer arquivo é recomendado dar um git status, para visualisar o que precisa adicionar e visualizar o que precisará ser enviado para o repositório.
 Insira o comando: git add arquivoAdicionado (Ex: git add README.md). logo após será necessário adicionar um comentário, insira o comando: git commit -m "SeuComentário" (Ex: git commit -m "Iniciei o README.md")
@@ -49,7 +98,12 @@ Após isso insira o comando: git push origin main (ou master, depende de você f
 
 <h4 style="color: yellow">Obs: Se você não utilizou o comando "git clone" será necessário utilizar o comando "git remote add origin" antes do git push (Ex: git remote add origin https://github.com/BrunoSerpa/Aprendendo-a-usar-GIT)</h4>
 
+→ [Voltar ao topo](#topo)
+
 # Erros
+
+
+<span id="conflitoRepositório">
 
 ## Conflito entre repositório Local e Remoto
 
@@ -59,11 +113,13 @@ git pull origin main (Isso fará uma comparação interna entre os arquivos)
 
 git merge --abort
 
-git checkout origin/main (Isso voltará o arquivo como estava antes do "git pull"). Após isso crie uma cópia
+git checkout origin/main (Isso mostrará o arquivo como está no repositório remoto). Após isso crie uma cópia
 
 
 git merge origin/main (Isso fará a alteração do repositório remoto.)
 
-git checkout main. (Isso verá se foi realizado alguma alteração no repositório remoto)
+git checkout main . (Isso verá se foi realizado alguma alteração no repositório remoto)
 
-Após esses dois comandos, compare ambos os arquivos e altere o que deseja alterar. Após isso os mesmos passos em "Adicionando um Arquivo"
+Após esses dois comandos, compare ambos os arquivos e altere o que deseja alterar, alterando em sua cópia. Insira git checkout origin/main novamente, troque o conteúdo da cópia pelo original e apague a cópia.  Após isso siga os mesmos passos em "Adicionando um Arquivo"
+
+→ [Voltar ao topo](#topo)
